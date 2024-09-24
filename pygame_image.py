@@ -12,6 +12,7 @@ def main():
     bg1_img = pg.image.load("fig/pg_bg.jpg")
     kt_img = pg.image.load("fig/3.png")
     kt_img = pg.transform.flip(kt_img, True, False)
+    kt_rct = kt_img.get_rect()
     bg2_img = pg.transform.flip(bg1_img, True, False)
     tmr = 0
     while True:
