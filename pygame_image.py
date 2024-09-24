@@ -19,6 +19,7 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
+        kt_rct.move_ip(-1,0)
         key_lst = pg.key.get_pressed()
         if key_lst[pg.K_UP]:
             kt_rct.move_ip(0, -1)
@@ -27,7 +28,7 @@ def main():
         if key_lst[pg.K_LEFT]:
             kt_rct.move_ip(-1, 0)
         if key_lst[pg.K_RIGHT]:
-            kt_rct.move_ip(1, 0)
+            kt_rct.move_ip(2, 0)
         x = -(tmr % 3200)
         screen.blit(bg1_img, [x, 0])
         screen.blit(bg2_img, [x+1600, 0])
